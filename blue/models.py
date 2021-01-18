@@ -80,7 +80,6 @@ class MyUser(AbstractBaseUser):
 
 class Product(models.Model):
     category = models.ManyToManyField(Category, blank=False)
-    tags = TaggableManager(blank=True)  # tags mechanism
     name = models.CharField(max_length=150)
     slug = models.SlugField(max_length=200)
     description = models.TextField(max_length=500, default="Empty description.")
